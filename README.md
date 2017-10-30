@@ -1,0 +1,2 @@
+# v-block.net
+FakeBackend是一个可以拦截http请求与响应的组件。它是在浏览器上工作的，不依赖于后台真实的API服务。此组件能够修改原始请求与响应结果，所以，在很多需要对http统一处理的业务场景非常有用(如：请求header统一加token等)。并且，此组件可以与其它任何ajax组件配合使用(如：fetch、axios、requrest...)。 由于组件拦截是基于底层XmlHttpRequest原始能力进行封装的，所以能很轻易的植入任何JS前端系统。几乎不需要写任何代码。 FakeBackend还设计了基于RESTful规范的http请求匹配规则Scheme匹配。能很好的完成Mock与数据Demo等工作。并且没有侵入性，也不影响原有正式的业务代码。还能与Proxy代码系统协同完成API联调等工作。
