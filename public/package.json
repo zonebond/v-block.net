@@ -1,6 +1,6 @@
 {
   "name": "v-block.net",
-  "version": "1.0.0-v.x.x",
+  "version": "1.0.0-rc",
   "description": "FakeBackend is a component that can intercept http requests and responses. It is working on the browser, does not depend on the backend of the real API services. This component can modify the original requests context and responses results, so many of the need for unified handling of http business scene is very useful (such as: add token to request header, etc.). Also, this component can be used with any other ajax component (eg fetch, axios, requrest ...).",
   "main": "main.js",
   "author": {

@@ -12,7 +12,7 @@ yarn add v-block.net -S
 ## 拦截器、Mock系统与Demo机制
 
 ## FakeBackend (Fake-Http-Backend)
-**包 : v-block/net**
+**包 : v-block.net**
 
 FakeBackend是一个可以拦截http请求与响应的组件。它是在浏览器上工作的，不依赖于后台真实的API服务。此组件能够修改原始请求与响应结果，所以，在很多需要对http统一处理的业务场景非常有用(如：请求header统一加token等)。并且，此组件可以与其它任何ajax组件配合使用(如：fetch、axios、requrest...)。
 由于组件拦截是基于底层XmlHttpRequest原始能力进行封装的，所以能很轻易的植入任何JS前端系统。几乎不需要写任何代码。
@@ -20,14 +20,14 @@ FakeBackend还设计了基于RESTful规范的http请求匹配规则Scheme匹配�
 
 ```
 // 在主入口文件引入，使拦截器第一时间工作。
-import 'v-block/net'
+import 'v-block.net'
 ```
 
 **配置与方法**
 
 引入工具库
 ```
-import { FakeBackend } from 'v-block/net'
+import FakeBackend from 'v-block.net'
 ```
 
 **Interception**
@@ -41,7 +41,7 @@ FakeBackend.interception({options});
 
 eg.
 ```
-import { FakeBackend } from 'v-block/net'
+import FakeBackend from 'v-block.net'
 
 FakeBackend.interception({
   request: function (ctx) {
@@ -62,7 +62,7 @@ FakeBackend.scheme({api:String, schemeMap:Object});
 **schemeMap: <object | map>**
 
 ```
-import { FakeBackend } from 'v-block/net'
+import FakeBackend from 'v-block.net'
 
 // api服务资源 <REST类型API>
 const api_uri = '/api-service/:param-a/action/:param-b';
@@ -132,7 +132,7 @@ FakeBackend.scheme(api, {
 出于设计原因，有些项目需要在服务缺失的情况下运行。然而，有些项目则不需要这样的功能。所以可以使用以下方式关闭Scheme匹配功能。
 **关闭Scheme功能，不会影响拦截器功能**
 ```
-import {FakeBackend} from 'v-block/net'
+import FakeBackend from 'v-block.net'
 //彻底关闭Scheme匹配功能。但不影响拦截器功能。
 FakeBackend.Shotdown();
 ```
